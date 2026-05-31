@@ -1,16 +1,89 @@
-# React + Vite
+# Alwyn Munatsi — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for Alwyn (Ndodana) Munatsi — Data Engineer · Data Analyst · BI Developer · AI/ML Engineering.
 
-Currently, two official plugins are available:
+Live at: [alwynmunatsi.com](https://alwynmunatsi.com) <!-- update with actual URL -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React 19 + Vite 8
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **AI Chatbot:** Groq API (llama-3.3-70b-versatile)
+- **Runtime:** Node.js / Express (API proxy server)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- Responsive single-page portfolio with smooth scroll sections
+- Interactive AI chatbot powered by Groq — answers questions about experience, skills, and availability
+- Sections: Hero, About, Experience, Projects, Certifications, Skills, Contact
+- Animated entrance transitions throughout
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- A [Groq API key](https://console.groq.com)
+
+### Installation
+
+```bash
+git clone https://github.com/alwyn-munatsi/alwyn-portfolio.git
+cd alwyn-portfolio
+npm install
+```
+
+### Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+VITE_GROQ_API_KEY=your_groq_api_key_here
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Runs the Vite dev server at `http://localhost:5173`.
+
+### Production Build
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## Project Structure
+
+```
+src/
+├── components/       # UI sections (Hero, About, Experience, etc.)
+│   └── Chatbot.jsx   # AI chatbot component
+├── data/
+│   └── portfolio.js  # All portfolio content (single source of truth)
+├── App.jsx
+└── main.jsx
+```
+
+To update portfolio content (experience, projects, skills, etc.), edit [src/data/portfolio.js](src/data/portfolio.js).
+
+---
+
+## Contact
+
+- LinkedIn: [linkedin.com/in/alwynmunatsi](https://www.linkedin.com/in/alwynmunatsi/)
+- GitHub: [github.com/alwyn-munatsi](https://github.com/alwyn-munatsi)
+- Email: alwynmunatsi@email.com

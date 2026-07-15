@@ -1,3 +1,5 @@
+import generatedProjects from './projects.generated.json'
+
 export const personal = {
   name: "Alwyn Munatsi",
   nickname: "Ndodana",
@@ -76,7 +78,10 @@ export const education = [
   },
 ]
 
-export const projects = [
+// Manually curated projects. These always take precedence over auto-synced
+// ones below (matched by GitHub URL), so you can override title/description/
+// category for any repo just by editing its entry here.
+const curatedProjects = [
   {
     title: "The Quest to Predict Labor: A Data-Driven Look at Weekly Work Hours",
     short: "Labor Prediction ML Model",
@@ -137,6 +142,17 @@ export const projects = [
     category: "Full Stack · AI",
     github: "https://github.com/alwyn-munatsi",
   },
+]
+
+// Auto-synced daily by .github/workflows/sync-projects.yml from GitHub repos
+// tagged with the "data-engineering" topic. `projects.generated.json` is
+// regenerated — do not hand-edit it; to override a specific auto-synced
+// project, add a curated entry above with the same `github` URL instead.
+const seenUrls = new Set(curatedProjects.map(p => p.github))
+
+export const projects = [
+  ...curatedProjects,
+  ...generatedProjects.filter(p => !seenUrls.has(p.github)),
 ]
 
 export const certifications = [

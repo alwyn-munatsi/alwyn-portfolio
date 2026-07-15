@@ -1,0 +1,41 @@
+name: Sync Data Engineering Projects
+
+on:
+  schedule:
+    # Daily at 09:00 UTC
+    - cron: '0 9 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Sync projects from GitHub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: alwyn-munatsi
+          PROJECT_TOPIC: data-engineering
+        run: node scripts/sync-projects.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/projects.generated.json
+          if git diff --cached --quiet; then
+            echo "No project changes to sync."
+          else
+            git commit -m "chore: sync data engineering projects from GitHub"
+            git push
+          fi

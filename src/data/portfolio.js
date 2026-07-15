@@ -90,7 +90,7 @@ const curatedProjects = [
     description: "Exploring which demographic, socioeconomic, and occupational variables best predict weekly labor supply (hours worked per week) among U.S. adults.",
     skills: ["Python", "TensorFlow", "Machine Learning", "Data Analysis"],
     category: "ML · Research",
-    github: "https://github.com/alwyn-munatsi/DAV-6150",
+    github: "https://github.com/alwyn-munatsi/machine-learning-predict-hours-per-week",
   },
   {
     title: "Data Engineering — Retail Order Analysis",
@@ -130,7 +130,7 @@ const curatedProjects = [
     description: "Time-series retail and stock market data pipeline combining real-time ingestion with historical analysis.",
     skills: ["Python", "Data Engineering", "Time Series"],
     category: "Data Engineering",
-    github: "https://github.com/alwyn-munatsi/retail-time-stocks-market-data-pipeline",
+    github: "https://github.com/alwyn-munatsi/real-time-stocks-market-data-pipeline",
   },
   {
     title: "Smart Health Diagnosis and Doctor Reference System",

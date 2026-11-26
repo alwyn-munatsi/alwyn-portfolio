@@ -5,7 +5,7 @@ export const personal = {
   nickname: "Ndodana",
   pronouns: "He/Him",
   location: "Jersey City, NJ, United States",
-  email: "alwynmunatsi@email.com",
+  email: "munatsialwyn26@gmail.com",
   linkedin: "https://www.linkedin.com/in/alwynmunatsi/",
   github: "https://github.com/alwyn-munatsi",
   tagline: "Data Engineer · Data Analyst · BI Developer · AI/ML Engineering",

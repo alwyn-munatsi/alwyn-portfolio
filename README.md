@@ -184,4 +184,4 @@ Deploy the `dist/` folder to any static host (Vercel, Netlify, GitHub Pages, Clo
 
 - LinkedIn: [linkedin.com/in/alwynmunatsi](https://www.linkedin.com/in/alwynmunatsi/)
 - GitHub: [github.com/alwyn-munatsi](https://github.com/alwyn-munatsi)
-- Email: alwynmunatsi@email.com
+- Email: munatsialwyn26@gmail.com
